@@ -5,6 +5,8 @@ userClickedPattern = [];
 $(".btn").click(function(){
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
+  var audio = new Audio("sounds/" + userChosenColour + ".mp3");
+  audio.play();
 });
 
 function nextSequence() {
@@ -20,6 +22,9 @@ function nextSequence() {
   //3. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
   var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
   audio.play();
+}
+function playSound(name){
+  
 }
 
 
